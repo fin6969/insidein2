@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #1F2937;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            background-color: #10B981;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        video {
+            display: none;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1F2937;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showVideo">click me twish</button>
+    <video id="videoPlayer" width="100%" controls>
+        <source src="mov.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <footer>@soluna69</footer>
+
+    <script>
+        const showVideoButton = document.getElementById('showVideo');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        showVideoButton.addEventListener('click', () => {
+            videoPlayer.style.display = 'block';
+            showVideoButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
